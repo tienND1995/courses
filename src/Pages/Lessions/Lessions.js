@@ -190,7 +190,7 @@ const Lessions = () => {
                 <ReactPlayer
                   url={video && `${LINK_YOUTUBE}/${youtube_parser(video)}`}
                   width="100%"
-                  height="50vh"
+                  height="500px"
                   ref={playerRef}
                   // onReady={() =>
                   //   playerRef.current?.seekTo(currentTime, 'seconds')

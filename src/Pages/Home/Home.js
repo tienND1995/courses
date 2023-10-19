@@ -71,6 +71,7 @@ const Home = () => {
       setLoading(false)
     }, 500)
   }
+  console.log(resthome)
 
   return (
     <LoadingScreen
@@ -151,7 +152,6 @@ const Home = () => {
 
       {resthome.content?.map((itemHome) => {
         const { id, name, title, listItem } = itemHome
-
         switch (name) {
           case 'question':
             return (
