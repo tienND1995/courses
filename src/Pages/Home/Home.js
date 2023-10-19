@@ -2,10 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './Home.scss'
 
 import LoadingScreen from 'react-loading-screen'
-
 import Markdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
-import remarkGfm from 'remark-gfm'
 
 import { httpClient } from '../../Services/httpClient/httpClient'
 import { Url } from '../../Services/Utils/Url'
@@ -21,7 +19,6 @@ const Home = () => {
   const [loading, setLoading] = useState(true)
   const [isDataCourseHome, setIsDataCourseHome] = useState(false)
   const [isDataBannerHome, setIsDataBannerHome] = useState(false)
-  const [isDataRestHome, setIsDataRestHome] = useState(false)
 
   // * courses banner
   const [coursesBanner, setCoursesBanner] = useState([])
@@ -44,30 +41,46 @@ const Home = () => {
   }
 
   // * rest home
-  const [home, setHome] = useState({ banners: {}, resthome: {} })
-  const { banners, resthome } = home
-  const getDataHome = async () => {
-    const response = await client.get(url.getHome())
+  const [restHome, setRestHome] = useState([])
+  const [isDataRestHome, setIsDataRestHome] = useState(false)
+  const getDataRestHome = async () => {
+    const response = await client.get('/restHome')
     const { res, data } = response
 
     if (res.ok) {
-      data.map((element) => {
-        return setHome({ ...home }, (home[element.name] = element))
-      })
+      setRestHome(data)
       setIsDataRestHome(true)
     }
   }
 
-  console.log(home)
+  // * slide home
+  const [slideHome, setSlideHome] = useState([])
+  const [isDataSlideHome, setIsDataSlideHome] = useState(false)
+  const getDataSlideHome = async () => {
+    const response = await client.get('/slideHome')
+    const { res, data } = response
+
+    if (res.ok) {
+      setSlideHome(data)
+      setIsDataSlideHome(true)
+    }
+  }
 
   useEffect(() => {
     getCoursesHome()
-    getDataHome()
+    getDataRestHome()
     getBannerHome()
+    getDataSlideHome()
   }, [])
 
   const [stop, setStop] = useState(false)
-  if (isDataBannerHome && isDataCourseHome && isDataRestHome && !stop) {
+  if (
+    isDataBannerHome &&
+    isDataCourseHome &&
+    isDataRestHome &&
+    isDataSlideHome &&
+    !stop
+  ) {
     setStop(true)
     setTimeout(() => {
       setLoading(false)
@@ -86,7 +99,7 @@ const Home = () => {
       <section className="banner">
         <div className="container padding">
           <div className="row">
-            {banners.content?.map(({ id, name, listImage }) => {
+            {slideHome?.map(({ id, name, listImage }) => {
               switch (name) {
                 case 'banner-left':
                   return (
@@ -151,7 +164,7 @@ const Home = () => {
         />
       ))}
 
-      {resthome.content?.map((itemHome) => {
+      {restHome?.map((itemHome) => {
         const { id, name, title, listItem } = itemHome
         switch (name) {
           case 'question':

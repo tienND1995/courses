@@ -26,14 +26,14 @@ function Navigate() {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon">
-            <i class="fa-solid fa-bars sidebar-open"></i>
+            <i className="fa-solid fa-bars sidebar-open"></i>
           </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item d-lg-none">
               <a className="nav-close nav-link">
-                <i class="fa-solid fa-xmark sidebar-close"></i>
+                <i className="fa-solid fa-xmark sidebar-close"></i>
               </a>
             </li>
             <li className="nav-item">

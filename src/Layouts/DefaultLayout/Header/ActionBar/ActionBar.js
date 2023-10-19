@@ -82,7 +82,7 @@ export default function ActionBar() {
                       navigate('/')
                     }}
                   >
-                   <i class="fa-solid fa-share-from-square"></i> Thoát
+                   <i className="fa-solid fa-share-from-square"></i> Thoát
                   </a>
                 </div>
                 
