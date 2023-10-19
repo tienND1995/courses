@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.js'
+import React from 'react'
+import './Assets/Styles/Styles.scss'
+import DefaultLayout from './Layouts/DefaultLayout/DefaultLayout'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello world</h1>
-    </div>
-  );
+const App = () => {
+  return <DefaultLayout/>
 }
 
-export default App;
+export default App

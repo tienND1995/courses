@@ -1,0 +1,84 @@
+/* course */
+.course {
+  margin-top: 30px;
+  background-color: #fff;
+  border: 1px solid #d7e0e0;
+}
+.course:hover {
+  transform: translateY(-1%);
+  box-shadow: 2px 2px 18px 2px #4d3d3d80;
+  transition: all 0.3s ease;
+}
+.foundation-course h3,
+.intensive-course h3,
+.featured-course h3,
+.skill-extention h3 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+.banner-course {
+  width: 50%;
+}
+.descreption-course {
+  padding: 10px;
+  width: 50%;
+}
+.descreption-top {
+  display: flex;
+  font-size: 0.6rem;
+  justify-content: space-between;
+  font-weight: 400;
+}
+.descreption-title {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 6px;
+  margin-bottom: 20px;
+
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.descreption-title a {
+  color: #000;
+}
+.descreption-teacher {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+}
+.descreption-teacher img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.descreption-price {
+  font-size: 1rem;
+  margin-top: 15px;
+}
+.descreption-price span {
+  text-decoration: underline;
+  color: #1978dc;
+}
+.descreption-price .sale {
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+
+// responsive
+
+@media (max-width: 767px) {
+  .course {
+    .banner-course {
+      width: 100%;
+    }
+
+    .descreption-course {
+      width: 100%;
+    }
+  }
+}

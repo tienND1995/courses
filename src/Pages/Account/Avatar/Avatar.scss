@@ -1,0 +1,36 @@
+.avatar {
+  .avatar-image {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid #eee;
+    margin: 0 auto;
+
+    > img {
+      object-position: center;
+    }
+  }
+
+  .avatar-name {
+    text-align: center;
+    padding: 10px 0 15px;
+
+    span {
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+  }
+
+  .avatar-upload {
+    background-color: #1978dc;
+    color: #fff;
+    width: max-content;
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin: 0 auto;
+
+    label {
+      cursor: pointer;
+    }
+  }
+}

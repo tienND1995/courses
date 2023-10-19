@@ -1,0 +1,73 @@
+#wrap-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  background: black;
+  z-index: 9;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.3s;
+  opacity: 0;
+
+  &.show {
+    pointer-events: unset;
+    visibility: visible;
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 991px) {
+  #navbarNavDropdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+
+    background: #191919;
+    z-index: 999;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: unset !important;
+
+    &.show {
+      pointer-events: unset;
+      visibility: visible;
+      width: 250px;
+      opacity: 1;
+      transition: 0.3s;
+    }
+
+    .nav-item {
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      .nav-link {
+        color: #ccc;
+        font-size: 13px;
+
+        > i {
+          margin-right: 10px;
+        }
+
+        &.active {
+          color: white;
+        }
+
+        &.nav-close {
+          float: right;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  #navbarNavDropdown.show {
+    width: 200px;
+  }
+}

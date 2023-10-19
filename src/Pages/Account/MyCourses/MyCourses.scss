@@ -1,0 +1,47 @@
+.user-info {
+  > ul {
+    flex-direction: column;
+  }
+}
+
+.my-courses {
+  table {
+    a {
+      background-color: blue;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: all 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .my-courses table a {
+    padding: 0px;
+    background-color: white;
+    color: blue;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 575px) {
+  .my-courses table a {
+    font-size: 12px;
+    border-radius: 0;
+    background-color: white;
+    color: blue;
+    font-weight: 600;
+  }
+
+  .my-courses table {
+    th,
+    td {
+      font-size: 12px;
+    }
+  }
+}

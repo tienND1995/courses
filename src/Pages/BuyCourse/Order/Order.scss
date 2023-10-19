@@ -1,0 +1,52 @@
+.order {
+  background-color: #f8f9fa;
+  padding: 30px;
+  .order-item {
+    border: .5px solid rgb(195, 225, 233);
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 30px;
+
+    .order-info {
+      margin: 15px 0 30px 0;
+      h3 {
+        margin-bottom: 10px;
+        font-size: 22px;
+        font-weight: 700;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+
+      p {
+        font-weight: 700;
+        color: darkslategrey;
+      }
+    }
+
+    button {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .icon-remove {
+    color: blue;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  textarea {
+    padding: 10px;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}

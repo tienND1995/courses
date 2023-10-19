@@ -1,0 +1,131 @@
+.header {
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+}
+.action-bar {
+  background-color: #f9f9f9;
+  padding: 10px 0;
+  font-size: 0.8rem;
+}
+
+.action-bar form,
+.action-bar form input,
+.action-bar form .btn {
+  border-radius: 18px;
+}
+.action-bar form {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.action-bar form input {
+  width: 100%;
+  padding: 5px 50px 5px 10px;
+  border: 1px solid #d8d8d8;
+}
+.action-bar form .btn {
+  position: absolute;
+  right: 1px;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+}
+
+.action-bar .slogan,
+.action-bar .mail {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+.action-bar .slogan a {
+  margin-left: 5px;
+}
+.action-bar i {
+  margin-right: 5px;
+}
+.action-bar a {
+  color: #000;
+}
+.action-bar a:hover {
+  text-decoration: underline;
+}
+.action-bar .slogan {
+  margin-right: 10px;
+}
+.action-bar .social {
+  display: flex;
+  gap: 10px;
+
+  a {
+    background: #1978dc;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+  }
+}
+
+.navbar .navbar-brand img {
+  width: 200px;
+}
+.navbar button.navbar-toggler {
+  display: flex;
+  order: -1;
+}
+.navbar .navbar-nav .nav-item {
+  padding: 0 10px;
+}
+
+// nav cart
+.navbar-cart {
+  position: relative;
+  span {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    color: white;
+    background: red;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.navbar-toggler-icon {
+  width: unset;
+  height: unset;
+  background: unset;
+}
+
+button.navbar-toggler {
+  background-color: #1978dc;
+  color: white;
+}
+
+@keyframes showAccount {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  70% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    .action-bar {
+      background-color: #191919;
+    }
+  }
+}

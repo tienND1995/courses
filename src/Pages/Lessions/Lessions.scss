@@ -1,0 +1,61 @@
+/* video */
+.video-detail {
+  padding: 20px;
+  background-color: #2c2f37;
+}
+
+.video-detail-bottom {
+  color: #fff;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 10px;
+
+  i {
+    margin-right: 10px;
+  }
+}
+
+/* accordion */
+
+.video .card-accordion > div > a {
+  color: #46525e;
+  width: 100%;
+  padding-left: 35px;
+  margin: 5px 0;
+  &.active {
+    background: #45a5f5;
+    color: #fff;
+  }
+}
+
+.video .accordion .accordion-detail .card-accordion {
+  padding: 10px 0 0 0;
+}
+
+.video .accordion-title {
+  justify-content: space-between;
+}
+
+// button disable
+
+.btn-disable {
+  cursor: not-allowed;
+  > button {
+    pointer-events: none;
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-detail-bottom {
+    font-size: 14px;
+    h4 {
+      font-size: 16px;
+    }
+  }
+
+  .video-detail > div:first-child {
+    height: 30vh !important;
+  }
+}

@@ -1,0 +1,35 @@
+form {
+  .form-name {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  .position-icon {
+    position: relative;
+    > i {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .btn-save {
+    background-color: #1978dc;
+    color: #fff;
+    width: max-content;
+    padding: 10px 15px;
+    border-radius: 30px;
+  }
+
+  
+}
+
+.star {
+  color: red;
+}
