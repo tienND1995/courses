@@ -58,6 +58,8 @@ const Home = () => {
     }
   }
 
+  console.log(home)
+
   useEffect(() => {
     getCoursesHome()
     getDataHome()
@@ -71,7 +73,6 @@ const Home = () => {
       setLoading(false)
     }, 500)
   }
-  console.log(resthome)
 
   return (
     <LoadingScreen

@@ -136,7 +136,7 @@ export default function Order() {
         number: form.number,
         status: false,
         codeOrder: randomStringCharactor(5),
-        date: dateFormat(now, 'formatDate'),
+        date: dateFormat(now, 'paddedShortDate'),
         courses: order,
       }
 
